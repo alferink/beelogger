@@ -1,0 +1,5 @@
+
+
+Arduino meldet alle Sensoren an Server (bei Neustart)
+-> mit ID, Name, Art
+->

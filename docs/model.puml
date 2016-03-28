@@ -1,0 +1,36 @@
+@startuml
+
+class Beehive {
+  String name
+}
+
+class Measurement {
+   date: Date
+   value: double
+   logger: Logger
+}
+
+class Sensor {
+    beehive: Beehive
+    name: String
+    sensorType: SensorType
+}
+
+class SensorType {
+    unit: String
+    type: String [Temperatur, Gewicht, Luftfeuchte]
+}
+
+class Event {
+   beehive: Beehive
+   date: Date
+   type: String
+   description: String
+}
+
+Sensor --> Beehive
+Sensor -> SensorType
+Log --> Sensor
+Event --> Beehive
+
+@enduml
